@@ -13,7 +13,7 @@ Router.map(function() {
   });
 
   this.resource('users', { path: '/users/:user_id' }, function() {
-  	this.route('posts', { path: '/users/:user_id' })
+  	this.route('posts', { path: '/users/:user_id' });
   	this.route('following');
   	this.route('followers');
   });
