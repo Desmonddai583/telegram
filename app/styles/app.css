@@ -62,13 +62,20 @@ body {
 }
 
 .input-field button {
-  width: 60px;
+  width: 70px;
   height: 30px;
   font-size: 13px;
   font-weight: bold;
   color: #0084B2;
   background: #FFFFFF;
   border: 1px solid #0084B2;
+}
+
+.link {
+  display: inline;
+  float: right;
+  margin-right: 40px;
+  margin-top: 5px;
 }
 
 .link a {
