@@ -12,16 +12,15 @@
       <label>Get going ...</label>
       <br/>
       <br/>
-      <input type='text' placeholder='Enter your username ...'/>
+      {{input type="text" placeholder="Enter your username ..." value=username}}
       <br/>
-
-      <input type='password' placeholder='Enter your password ...'/>
-      <br/>
+      {{input type="password" placeholder="Enter your password ..." value=password}}
       <br/>
       <br/>
-      <button type='button' class='login'>Login</button>  
+      <br/>
+      <button type='button' class='login' {{action 'login'}}>Login</button>  
       <div class="link">
-        <span><a href="#">Recover password</a> or <a href="#">Sign up</a></span>
+        <span>{{#link-to 'auth.forgotpass'}}Recover password{{/link-to}} or {{#link-to 'auth.signup'}}Sign up{{/link-to}}</span>
       </div>
     </div>
   </div>

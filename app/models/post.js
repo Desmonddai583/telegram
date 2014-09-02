@@ -6,4 +6,15 @@ var Post = DS.Model.extend({
   author: DS.belongsTo('user'),
 });
  
+Post.reopenClass({
+  FIXTURES: [
+    {
+      id: 1,
+      body: 'desmond',
+      date: new Date(),
+      author: 'desmond',
+    }
+  ]
+});
+
 export default Post;

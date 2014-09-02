@@ -11,18 +11,18 @@
     <div class='input-field'>
       <label>Create your account</label>
       <br/>
+      {{input type="text" placeholder="Enter your email ..." value=email}}
       <br/>
-      <input type='text' placeholder='Enter your name ...'/>
+      {{input type="text" placeholder="Enter your name ..." value=name}}
       <br/>
-      <input type='text' placeholder='Enter your username ...'/>
+      {{input type="text" placeholder="Enter your username ..." value=username}}
       <br/>
-      <input type='password' placeholder='Enter your password ...'/>
+      {{input type="password" placeholder="Enter your password ..." value=password}}
       <br/>
       <br/>
-      <br/>
-      <button type='button' class='signup'>Sign up</button>
+      <button type='submit' class='signup' {{action 'signup'}}>Sign up</button>
       <div class="link">
-        <span><a href="#">Login</a></span>
+        <span>{{#link-to 'auth.login'}}Login{{/link-to}}</span>
       </div>
     </div>
   </div>
