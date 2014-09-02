@@ -62,13 +62,24 @@ body {
 }
 
 .input-field button {
-  width: 70px;
   height: 30px;
   font-size: 13px;
   font-weight: bold;
   color: #0084B2;
   background: #FFFFFF;
   border: 1px solid #0084B2;
+}
+
+.input-field .login {
+  width: 60px;
+}
+
+.input-field .signup {
+  width: 70px;
+}
+
+.input-field .reset {
+  width: 130px;
 }
 
 .link {
