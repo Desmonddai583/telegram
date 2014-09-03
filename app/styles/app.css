@@ -1,6 +1,7 @@
 body {
   background: #008CB8;
   font-family: "Open Sans";
+  margin: 0;
 }
 
 .login-panel {
@@ -111,10 +112,48 @@ body {
 
 ::-moz-placeholder {  /* Firefox 19+ */
   font-size: 13px;
-  color: #000000 
+  color: #000000; 
 }
 
 :-ms-input-placeholder {  
   font-size: 13px;
-  color: #000000
+  color: #000000;
+}
+
+.dashboard {
+  background-color: #FFF;
+}
+
+.dashboard .header {
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.header .home-link {
+  position:absolute;
+  display: inline-block
+}
+
+.home-link a {
+  text-decoration: none;
+  color: #0084B2;
+}
+
+.header .home-logo {
+  margin-left: 540px;
+  display: inline-block;
+}
+
+.header .profile-link {
+  float: right;
+  display: inline-block
+}
+
+.profile-link a {
+  text-decoration: none;
+  color: #0084B2;
 }
