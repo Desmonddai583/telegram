@@ -1,6 +1,6 @@
 <div class='dashboard-body col-md-6 col-md-offset-3'>
   <div class="publish">
-    {{textarea class='form-control' value=body rows='4'}}
+    {{textarea class='form-control' value=body rows='4' maxlength='140'}}
     <div class="bottom-section">
       <span>{{remainingWords}} characters</span>
       <button class='btn btn-default' {{action publish}}>Publish</button>
@@ -16,7 +16,7 @@
     <div class="content">
       {{#each}}
         <div class='photo'>
-          <a><img {{bindAttr src=author.photo}} height="60" width="60"></a>
+          <a><img {{bind-attr src=author.photo}} height="60" width="60"></a>
         </div>
         <div class='body'>
           <p><strong>{{author.name}}</strong></p>
