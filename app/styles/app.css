@@ -122,12 +122,11 @@ body {
 
 .dashboard {
   background-color: #FFF;
+  height: 1000px;
 }
 
 .dashboard .header {
-  height: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
@@ -144,7 +143,7 @@ body {
 }
 
 .header .home-logo {
-  margin-left: 540px;
+  margin-left: 570px;
   display: inline-block;
 }
 
@@ -156,4 +155,45 @@ body {
 .profile-link a {
   text-decoration: none;
   color: #0084B2;
+}
+
+.dashboard .dashboard-body {
+  margin-top: 30px;
+}
+
+.dashboard-body .publish textarea {
+  border: none;
+  resize: none;
+  font-size: 20pt;
+}
+
+.dashboard-body .publish .bottom-section {
+  margin-top: 15px;
+}
+
+.dashboard-body .bottom-section button {
+  float: right;
+}
+
+.dashboard-body .latest-post {
+  margin-top: 35px;
+}
+
+.latest-post .title p {
+  font-size: 15pt;
+}
+
+.latest-post hr {
+  height: 1px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.latest-post .content .photo {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.latest-post .content .body {
+  display: inline-block;
+  margin-left: 10px
 }

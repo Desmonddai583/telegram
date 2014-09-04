@@ -12,8 +12,8 @@ Router.map(function() {
   	this.route('forgotpass_confirm');
   });
 
-  this.resource('users', { path: '/users/:user_id' }, function() {
-  	this.route('posts', { path: '/users/:user_id' });
+  this.resource('user', { path: '/users/:user_id' }, function() {
+  	this.route('posts', { path: '/' });
   	this.route('following');
   	this.route('followers');
   });

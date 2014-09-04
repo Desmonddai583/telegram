@@ -14,7 +14,7 @@ export default Ember.ObjectController.extend({
       var user = this.store.createRecord('user', {
         email: user_info.email,
         name: user_info.name,
-        username: user_info.username,
+        id: user_info.username,
         password: user_info.password,
       });
 

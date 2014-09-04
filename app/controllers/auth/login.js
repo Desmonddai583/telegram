@@ -9,10 +9,10 @@ export default Ember.ObjectController.extend({
       var self = this;
       var login_info = this.getProperties('username', 'password');
       this.store.find('user', {
-        username: login_info.username,
+        id: login_info.username,
         password: login_info.password
       }).then(function(user) {
-        if (user.get('firstObject.username'))
+        if (user.get('firstObject.id'))
           self.transitionToRoute('dashboard');
         else
           alert('fail');
