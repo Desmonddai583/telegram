@@ -1,0 +1,12 @@
+<div class="followers col-md-6 col-md-offset-3">
+  <div class="content">
+    {{#each user in controller}}
+      <div class='user-info'>
+        <a><img {{bind-attr src=user.photo}} height="60" width="60"></a>
+        <span><strong>{{user.name}}</strong></span>
+        <button type='button' class='follow'>Follow</button>  
+      </div>
+      <hr>
+    {{/each}}
+  </div>
+</div>

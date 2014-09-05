@@ -188,12 +188,12 @@ body {
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
 }
 
-.latest-post .content .photo {
+.content .photo {
   vertical-align: top;
   display: inline-block;
 }
 
-.latest-post .content .body {
+.content .body {
   display: inline-block;
   margin-left: 10px
 }
@@ -243,3 +243,21 @@ body {
   color: #AAA;
 }
 
+.user-info span {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.user-info button {
+  display: inline-block;
+  float: right;
+  height: 25px;
+  width: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0084B2;
+  background: #FFFFFF;
+  border: 1px solid #0084B2;
+  margin-top: 20px;
+}
