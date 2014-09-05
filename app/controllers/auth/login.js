@@ -13,9 +13,12 @@ export default Ember.ObjectController.extend({
         password: login_info.password
       }).then(function(user) {
         if (user.get('firstObject.id'))
+        {
+          self.get('session').set('user', user.get('firstObject'));
           self.transitionToRoute('dashboard');
+        }
         else
-          alert('fail');
+          alert('Invalid Credentials');
       });
     }
   }

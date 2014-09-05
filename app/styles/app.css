@@ -125,7 +125,7 @@ body {
   background-color: #FFF;
 }
 
-.dashboard .header {
+.header {
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -143,7 +143,7 @@ body {
 }
 
 .header .home-logo {
-  margin-left: 570px;
+  margin-left: 580px;
   display: inline-block;
 }
 
@@ -197,3 +197,49 @@ body {
   display: inline-block;
   margin-left: 10px
 }
+
+.user-profile {
+  overflow-y: hidden;
+  background-color: #FFF;
+}
+
+.user-profile .title img {
+  display: block;
+  margin: 20px auto 10px auto;
+}
+
+.user-profile .title p {
+  display: block;
+  margin-bottom: 0;
+}
+
+.user-profile .title button {
+  display: block;
+  margin: 15px auto 10px auto;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0084B2;
+  background: #FFFFFF;
+  border: 1px solid #0084B2;
+}
+
+.user-profile .content-tab {
+  margin-left: 60px;
+}
+
+.user-profile .content-tab a {
+  font-size: 22px;
+  margin-right: 20px;
+  padding-bottom: 22px;
+}
+
+.user-profile .content-tab a:hover{
+  text-decoration: none;
+}
+
+.user-profile .content-tab .active-tab {
+  box-shadow: 0 2px 0 #0084B2;
+  color: #AAA;
+}
+

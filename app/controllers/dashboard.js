@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
+  itemController: 'post',
   body: "", 
 
   remainingWords: function() {
@@ -15,7 +16,7 @@ export default Ember.ArrayController.extend({
       var post = this.store.createRecord('post', {
         body: body,
         date: new Date(),
-        author: this.get('model').get('firstObject.author'),
+        author: this.get('session.user'),
       });
 
       post.save();

@@ -1,13 +1,16 @@
 <div class="header">
-	<div class='home-link'>
-		{{#link-to 'dashboard'}}<img src="images/icon-home.png"> <span>Home</span>{{/link-to}}
-	</div>
+  <div class='home-link'>
+    {{#link-to 'dashboard'}}<img src="images/icon-home.png"> <span>Home</span>{{/link-to}}
+  </div>
 
-	<div class='home-logo'>
-		<img src="images/telegram-logo-header.png">
-	</div>
+  <div class='home-logo'>
+    <img src="images/telegram-logo-header.png">
+  </div>
 
-	<div class='profile-link'>
-		<a><img src="images/avatar.png" height="30" width="30"> <span>Desmond</span></a>
-	</div>
+  <div class='profile-link'>
+    <a>
+      <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
+      <span>{{#link-to 'user' session.user.id}}{{session.user.name}}{{/link-to}}</span>
+    </a>
+  </div>
 </div>

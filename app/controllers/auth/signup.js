@@ -19,6 +19,7 @@ export default Ember.ObjectController.extend({
       });
 
       user.save().then(function(new_user) {
+        self.get('session').set('user', user);
         self.transitionToRoute('dashboard');
       })
     }

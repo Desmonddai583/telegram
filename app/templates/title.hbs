@@ -1,0 +1,13 @@
+<div class="title col-md-6 col-md-offset-3">
+    <img {{bind-attr src=photo}} width='70' height='70'>
+    <p class="text-center"><strong>{{name}}</strong></p>
+    <p class="text-center">@{{id}}</p>
+    <button type='button' class='follow'>Follow</button>  
+    <hr>
+      <div class="content-tab text-center">
+        {{#link-to 'user.posts' activeClass="active-tab"}}Posts{{/link-to}}
+        {{#link-to 'user.following' activeClass="active-tab"}}Following{{/link-to}}
+        {{#link-to 'user.followers' activeClass="active-tab"}}Followers{{/link-to}}
+      </div>
+    <hr>
+</div>
