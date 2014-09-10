@@ -1,29 +1,16 @@
-<div class="login-panel">
-  <div class='left'>
-    <div class='left-body'>
-      <div class="logo">
-        <img src="images/telegram-logo.png">
-      </div>
-    </div>
-  </div>
-  <div class='right'>
-    <img class='postmark' src="images/postmark.png">
-    <div class='input-field'>
-      <label>Create your account</label>
-      <br/>
-      {{input type="text" placeholder="Enter your email ..." value=email}}
-      <br/>
-      {{input type="text" placeholder="Enter your name ..." value=name}}
-      <br/>
-      {{input type="text" placeholder="Enter your username ..." value=username}}
-      <br/>
-      {{input type="password" placeholder="Enter your password ..." value=password}}
-      <br/>
-      <br/>
-      <button type='submit' class='signup' {{action 'signup'}}>Sign up</button>
-      <div class="link">
-        <span>{{#link-to 'auth.login'}}Login{{/link-to}}</span>
-      </div>
-    </div>
-  </div>
+<label>Create your account</label>
+<br/>
+{{input type="text" placeholder="Enter your email ..." value=email}}
+<br/>
+{{input type="text" placeholder="Enter your name ..." value=name}}
+<br/>
+{{input type="text" placeholder="Enter your username ..." value=username}}
+<br/>
+{{input type="password" placeholder="Enter your password ..." value=password}}
+<br/>
+<br/>
+<button type='submit' class='signup' {{action 'signup'}}>Sign up</button>
+<div class="link">
+  <span>{{#link-to 'auth.login'}}Login{{/link-to}}</span>
 </div>
+

@@ -18,7 +18,9 @@ export default Ember.ObjectController.extend({
           self.transitionToRoute('dashboard');
         }
         else
+        {
           alert('Invalid Credentials');
+        }
       });
     }
   }

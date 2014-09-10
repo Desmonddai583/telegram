@@ -18,10 +18,10 @@ export default Ember.ObjectController.extend({
         password: user_info.password,
       });
 
-      user.save().then(function(new_user) {
+      user.save().then(function() {
         self.get('session').set('user', user);
         self.transitionToRoute('dashboard');
-      })
+      });
     }
   }
 });

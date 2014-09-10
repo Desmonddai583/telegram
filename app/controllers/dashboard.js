@@ -10,7 +10,6 @@ export default Ember.ArrayController.extend({
 
   actions: {
     publish: function() {
-      var self = this;
       var body = this.get('body');
 
       var post = this.store.createRecord('post', {
