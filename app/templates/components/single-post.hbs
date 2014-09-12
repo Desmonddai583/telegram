@@ -1,0 +1,18 @@
+<div class='photo'>
+  {{#link-to 'user' post.author.id}}
+    <img {{bind-attr src=post.author.photo}} height="60" width="60">
+  {{/link-to}}
+</div>
+<div class='body'>
+  {{#link-to 'user' post.author.id}}
+    <p><strong>{{post.author.name}}</strong></p>
+  {{/link-to}}
+  <p>{{post.body}}</p>
+  <span><em>{{format-time post.date}}</em></span>
+  {{#unless post.isAuthor}}
+  <span> . <a>Repost</a></span>
+  {{else}}
+  <span> . <a>Delete</a></span>
+  {{/unless}}
+</div>
+<hr>

@@ -15,21 +15,7 @@
     <hr>
     <div class="content">
       {{#each post in controller}}
-        <div class='photo'>
-          <a><img {{bind-attr src=post.author.photo}} height="60" width="60"></a>
-        </div>
-        <div class='body'>
-          <p><strong>{{post.author.name}}</strong></p>
-          <p>{{post.body}}</p>
-          <span><em>{{format-time date}}</em></span>
-          {{#unless post.isAuthor}}
-          <span> . <a>Repost</a></span>
-          {{/unless}}
-          {{#if post.isAuthor}}
-            <span> . <a>Delete</a></span>
-          {{/if}}
-        </div>
-        <hr>
+        {{single-post post=post}}
       {{/each}}
     </div>
   </div>

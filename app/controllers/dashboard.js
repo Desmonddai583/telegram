@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   itemController: 'post',
   body: "", 
+  sortProperties: ['date'],
+  sortAscending: false,
 
   remainingWords: function() {
     return 140 - this.get('body').length;

@@ -8,9 +8,9 @@
   </div>
 
   <div class='profile-link'>
-    <a>
+    {{#link-to 'user' session.user.id}}
       <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
-      <span>{{#link-to 'user' session.user.id}}{{session.user.name}}{{/link-to}}</span>
-    </a>
+      <span>{{session.user.name}}</span>
+    {{/link-to}}
   </div>
 </div>

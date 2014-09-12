@@ -18,6 +18,13 @@ User.reopenClass({
       name: 'Desmond Dai',
       email: 'desmonddai583@gmail.com',
       photo: 'images/avatar.png',
+    },
+    {
+      id: 'linda',
+      password: '098567',
+      name: 'Linda Ng',
+      email: 'lindalam583@gmail.com',
+      photo: 'images/avatar1.png',
     }
   ]
 });
