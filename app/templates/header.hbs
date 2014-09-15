@@ -1,16 +1,31 @@
 <div class="header">
+  {{#if session.isAuthenticated}}
   <div class='home-link'>
     {{#link-to 'dashboard'}}<img src="images/icon-home.png"> <span>Home</span>{{/link-to}}
   </div>
+  {{/if}}
 
   <div class='home-logo'>
     <img src="images/telegram-logo-header.png">
   </div>
 
   <div class='profile-link'>
-    {{#link-to 'user' session.user.id}}
-      <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
-      <span>{{session.user.name}}</span>
-    {{/link-to}}
+    {{#if session.isAuthenticated}}
+      {{#link-to 'user' session.user.id}}
+        <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
+        <span>{{session.user.name}}</span>
+      {{/link-to}}
+    {{else}}
+      <span>
+      {{#link-to 'auth.login'}}
+        Login
+      {{/link-to}}
+        or
+      {{#link-to 'auth.signup'}}
+        Sign Up
+      {{/link-to}}
+      </span>
+    {{/if}}
   </div>
+  
 </div>
