@@ -15,7 +15,7 @@
     <hr>
     <div class="content">
       {{#each post in controller}}
-        {{single-post post=post}}
+        {{single-post post=post deletePost="deletePost"}}
       {{/each}}
     </div>
   </div>
