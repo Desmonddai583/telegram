@@ -9,24 +9,5 @@ var User = DS.Model.extend({
   // followers: DS.hasMany('user', { inverse: 'following' }),
   // following: DS.hasMany('user', { inverse: 'followers' }),
 });
- 
-User.reopenClass({
-  FIXTURES: [
-    {
-      id: 'desmond',
-      password: '098567',
-      name: 'Desmond Dai',
-      email: 'desmonddai583@gmail.com',
-      photo: 'images/avatar.png',
-    },
-    {
-      id: 'linda',
-      password: '098567',
-      name: 'Linda Ng',
-      email: 'lindalam583@gmail.com',
-      photo: 'images/avatar1.png',
-    }
-  ]
-});
 
 export default User;

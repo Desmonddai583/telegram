@@ -12,7 +12,7 @@ export default Ember.ObjectController.extend({
         id: login_info.username,
         password: login_info.password
       }).then(function(user) {
-        if (user.get('firstObject.id'))
+        if (user.get('id'))
         {
           self.get('session').set('user', user.get('firstObject'));
           self.transitionToRoute('dashboard');
