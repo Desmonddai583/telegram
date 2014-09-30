@@ -13,16 +13,11 @@ export default Ember.ObjectController.extend({
         password: login_info.password,
         operation: 'login'
       }).then(function(users) {
-        if (users.get('length') > 0)
-        {
-          var user = users.get('firstObject')
-          self.get('session').set('user', user);
-          self.transitionToRoute('dashboard');
-        }
-        else
-        {
-          alert('Invalid Credentials');
-        }
+        var user = users.get('firstObject')
+        self.get('session').set('user', user);
+        self.transitionToRoute('dashboard');
+      }, function(err) {
+        alert(err.responseText);
       });
     }
   }
