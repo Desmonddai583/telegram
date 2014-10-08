@@ -15,7 +15,7 @@
         <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
         <span>{{session.user.name}}</span>
       {{/link-to}}
-      <a href="#" {{action "logout"}}>Logout</a>
+      <button class="btn btn-info" {{action "logout"}}>  Logout</a>
     {{else}}
       <span>
       {{#link-to 'auth.login'}}

@@ -25,12 +25,12 @@ export default Ember.ArrayController.extend({
       this.set('body', '');
     },
     logout: function() {
-      $.ajax({
-        url:"http://localhost.com:9000/logout",  
-        success:function() {
-          this.transitionToRoute('/');
-        }
-      });
+      var self = this;
+      $.get('/api/logout')
+       .done(function(){
+         self.get('session').set('user', null);
+         self.transitionToRoute('auth.login');
+        })
     }
   },
 });
