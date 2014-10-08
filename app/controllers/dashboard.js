@@ -30,7 +30,7 @@ export default Ember.ArrayController.extend({
        .done(function(){
          self.get('session').set('user', null);
          self.transitionToRoute('auth.login');
-        })
+        });
     }
   },
 });
