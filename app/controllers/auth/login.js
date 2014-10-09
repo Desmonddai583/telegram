@@ -13,10 +13,14 @@ export default Ember.ObjectController.extend({
         password: login_info.password,
         operation: 'login'
       }).then(function(users) {
+        self.username = null;
+        self.password = null;
         var user = users.get('firstObject');
         self.get('session').set('user', user);
         self.transitionToRoute('dashboard');
       }, function(err) {
+        self.username = null;
+        self.password = null;
         alert(err.responseText);
       });
     }
