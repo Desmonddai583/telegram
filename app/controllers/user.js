@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   isFollow: function() {
-    
   }.property('session.user'),
 
   actions: {
