@@ -13,14 +13,18 @@ export default Ember.ObjectController.extend({
         password: window.md5(login_info.password),
         operation: 'login'
       }).then(function(users) {
-        self.username = null;
-        self.password = null;
+        self.setProperties({
+          'username': '',
+          'password': ''
+        });
         var user = users.get('firstObject');
         self.get('session').set('user', user);
         self.transitionToRoute('dashboard');
       }, function(err) {
-        self.username = '';
-        self.password = '';
+        self.setProperties({
+          'username': '',
+          'password': ''
+        });
         alert(err.responseText);
       });
     }
