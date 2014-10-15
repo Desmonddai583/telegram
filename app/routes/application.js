@@ -11,5 +11,17 @@ export default Ember.Route.extend({
       }
       return users;
     });
+  },
+  actions: {
+    logout: function() {
+      var self = this;
+      $.get('/api/logout')
+       .done(function(){
+         self.get('session').set('user', null);
+         self.store.unloadAll('post');
+         self.store.unloadAll('user');
+         self.transitionTo('auth.login');
+        });
+    }
   }
 });

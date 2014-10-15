@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
       var login_info = this.getProperties('username', 'password');
       this.store.find('user', {
         id: login_info.username,
-        password: login_info.password,
+        password: window.md5(login_info.password),
         operation: 'login'
       }).then(function(users) {
         self.username = null;

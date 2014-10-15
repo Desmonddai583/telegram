@@ -14,7 +14,7 @@ export default Ember.ObjectController.extend({
         email: user_info.email,
         name: user_info.name,
         id: user_info.username,
-        password: user_info.password,
+        password: window.md5(user_info.password),
       });
 
       user.save().then(function() {

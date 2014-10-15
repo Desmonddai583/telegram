@@ -22,16 +22,6 @@ export default Ember.ArrayController.extend({
       post.save();
 
       this.set('body', '');
-    },
-    logout: function() {
-      var self = this;
-      $.get('/api/logout')
-       .done(function(){
-         self.get('session').set('user', null);
-         self.store.unloadAll('post');
-         self.store.unloadAll('user');
-         self.transitionToRoute('auth.login');
-        });
     }
   },
 });
