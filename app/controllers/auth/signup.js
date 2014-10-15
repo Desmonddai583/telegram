@@ -10,7 +10,6 @@ export default Ember.ObjectController.extend({
     signup: function() {
       var self = this;
       var user_info = this.getProperties('email', 'name', 'username', 'password');
-
       var user = this.store.createRecord('user', {
         email: user_info.email,
         name: user_info.name,
