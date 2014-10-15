@@ -19,8 +19,8 @@ export default Ember.ObjectController.extend({
         self.get('session').set('user', user);
         self.transitionToRoute('dashboard');
       }, function(err) {
-        self.username = null;
-        self.password = null;
+        self.username = '';
+        self.password = '';
         alert(err.responseText);
       });
     }
