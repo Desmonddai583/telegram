@@ -3,7 +3,7 @@
   <p class="text-center"><strong>{{name}}</strong></p>
   <p class="text-center">@{{id}}</p>
   {{#if session.isAuthenticated}}
-    {{#if isFollow}}
+    {{#if user.isFollowCurrentUser}}
       <button type='button' class='unfollow' {{action 'unfollow' id}}>unFollow</button>
     {{else}}
       <button type='button' class='follow' {{action 'follow' id}}>Follow</button>

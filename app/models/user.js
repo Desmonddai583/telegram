@@ -5,9 +5,7 @@ var User = DS.Model.extend({
   name: DS.attr('string'),
   email: DS.attr('string'),
   photo: DS.attr('string'),
-  // posts: DS.hasMany('post'),
-  // followers: DS.hasMany('user', { inverse: 'following' }),
-  // following: DS.hasMany('user', { inverse: 'followers' }),
+  isFollowCurrentUser: DS.attr('boolean')
 });
 
 export default User;
