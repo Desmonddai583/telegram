@@ -5,7 +5,11 @@
         <a><img {{bind-attr src=user.photo}} height="60" width="60"></a>
         <span><strong>{{user.name}}</strong></span>
         {{#if session.isAuthenticated}}
-          <button type='button' class='follow'>Follow</button>  
+          {{#if user.isFollowedByCurrentUser}}
+            <button type='button' class='unfollow' {{action 'unfollow' id}}>unFollow</button>
+          {{else}}
+            <button type='button' class='follow' {{action 'follow' id}}>Follow</button>
+          {{/if}}   
         {{/if}}
       </div>
       <hr>

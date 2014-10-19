@@ -5,7 +5,7 @@ var User = DS.Model.extend({
   name: DS.attr('string'),
   email: DS.attr('string'),
   photo: DS.attr('string'),
-  isFollowCurrentUser: DS.attr('boolean')
+  isFollowedByCurrentUser: DS.attr('boolean')
 });
 
 export default User;
