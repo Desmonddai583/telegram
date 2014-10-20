@@ -3,11 +3,13 @@
   <p class="text-center"><strong>{{name}}</strong></p>
   <p class="text-center">@{{id}}</p>
   {{#if session.isAuthenticated}}
-    {{#if isFollowedByCurrentUser}}
-      <button type='button' class='unfollow' {{action 'unfollow' id}}>unFollow</button>
-    {{else}}
-      <button type='button' class='follow' {{action 'follow' id}}>Follow</button>
-    {{/if}}   
+    {{#unless isSelf}}
+      {{#if isFollowedByCurrentUser}}
+        <button type='button' class='unfollow' {{action 'unfollow' id}}>unFollow</button>
+      {{else}}
+        <button type='button' class='follow' {{action 'follow' id}}>Follow</button>
+      {{/if}}   
+    {{/unless}}
   {{/if}}
   <hr>
     <div class="content-tab text-center">

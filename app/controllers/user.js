@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+  isSelf: function() {
+    return this.get('model') === this.get('session.user');
+  }.property('model', 'session.user'),
+
   actions: {
     follow: function(id) {
       var follow = id;
