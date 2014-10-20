@@ -16,6 +16,17 @@ export default Ember.ObjectController.extend({
         success: function() {    
         },
       });
+    },
+    unfollow: function(id) {
+      var follow = id;
+      $.ajax({
+        url: '/api/unfollow/',
+        type: 'POST',
+        dataType: 'json',
+        data: {unfollowingID: follow},
+        success: function() {    
+        },
+      });
     }
   }
 });
