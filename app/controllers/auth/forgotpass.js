@@ -12,10 +12,13 @@ export default Ember.ObjectController.extend({
         type: 'POST',
         dataType: 'json',
         data: {'email': email},
-        success: function() {    
-          this.transitionToRoute('auth.forgotpass_confirm');
+        success: function() {
+          self.transitionToRoute('auth.forgotpass_confirm');
         },
-      });
+        error: function(xhr) {
+          alert(xhr.responseText);
+        }
+      });      
     }
   }
 });
