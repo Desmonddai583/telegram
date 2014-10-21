@@ -2,7 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
-  	return this.store.find('user', params.user_id);
+    var self = this;
+    var promise = this.store.find('user', params.user_id);
+    return promise.then(function(user) {
+      return user;
+    }, function(err) {
+      self.transitionTo('auth.login');
+    });
   },
 
   renderTemplate: function() {

@@ -5,9 +5,9 @@
   {{#if session.isAuthenticated}}
     {{#unless isSelf}}
       {{#if isFollowedByCurrentUser}}
-        <button type='button' class='unfollow' {{action 'unfollow' id}}>unFollow</button>
+        <button type='button' class='unfollow' {{action 'unfollow' this}}>unFollow</button>
       {{else}}
-        <button type='button' class='follow' {{action 'follow' id}}>Follow</button>
+        <button type='button' class='follow' {{action 'follow' this}}>Follow</button>
       {{/if}}   
     {{/unless}}
   {{/if}}

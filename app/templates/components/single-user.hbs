@@ -8,9 +8,9 @@
   {{#if session.isAuthenticated}}
     {{#unless isSelf}}
       {{#if user.isFollowedByCurrentUser}}
-        <button type='button' class='unfollow' {{action 'unfollow' user.id}}>unFollow</button>
+        <button type='button' class='unfollow' {{action 'unfollow' user}}>unFollow</button>
       {{else}}
-        <button type='button' class='follow' {{action 'follow' user.id}}>Follow</button>
+        <button type='button' class='follow' {{action 'follow' user}}>Follow</button>
       {{/if}}   
     {{/unless}}
   {{/if}}
