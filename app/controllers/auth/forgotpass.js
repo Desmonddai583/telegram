@@ -13,6 +13,7 @@ export default Ember.ObjectController.extend({
         dataType: 'json',
         data: {'email': email},
         success: function() {
+          self.set('email', '');
           self.transitionToRoute('auth.forgotpass_confirm');
         },
         error: function(xhr) {
