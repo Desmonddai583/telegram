@@ -27,7 +27,7 @@ export default Ember.ObjectController.extend({
           'username': '',
           'password': ''
         });
-        this.notify.info(err.responseText);
+        alert(err.responseText);
       });
     }
   }

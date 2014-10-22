@@ -19,9 +19,8 @@ export default Ember.ArrayController.extend({
         author: this.get('session.user'),
       });
 
-      post.save();
-
       this.set('body', '');
+      post.save();
     }
   },
 });
