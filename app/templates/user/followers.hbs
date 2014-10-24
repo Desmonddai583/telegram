@@ -1,7 +1,7 @@
 <div class="followers col-md-6 col-md-offset-3">
   <div class="content">
     {{#each user in controller}}
-      {{single-user user=user}}
+      {{single-user user=user session=session follow="follow" unfollow="unfollow"}}
     {{/each}}
   </div>
 </div>
