@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     return promise.then(function(user) {
       return user;
     }, function(err) {
-      Notify.alert(err.responseText)
+      Notify.alert(err.responseText);
       self.transitionTo('auth.login');
     });
   },
