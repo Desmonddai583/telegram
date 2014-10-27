@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import Notify from 'ember-notify';
+Notify.useBootstrap();
 
 export default Ember.ObjectController.extend({
   email: null,
@@ -16,8 +18,8 @@ export default Ember.ObjectController.extend({
           self.set('email', '');
           self.transitionToRoute('auth.forgotpass_confirm');
         },
-        error: function(xhr) {
-          alert(xhr.responseText);
+        error: function(err) {
+          Notify.alert(err.responseText);
         }
       });      
     }

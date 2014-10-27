@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import Notify from 'ember-notify';
+Notify.useBootstrap();
 
 export default Ember.Route.extend({
   model: function(params) {
@@ -7,6 +9,7 @@ export default Ember.Route.extend({
     return promise.then(function(user) {
       return user;
     }, function(err) {
+      Notify.alert(err.responseText)
       self.transitionTo('auth.login');
     });
   },

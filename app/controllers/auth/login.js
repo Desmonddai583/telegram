@@ -1,8 +1,8 @@
 import Ember from 'ember';
 import Notify from 'ember-notify';
+Notify.useBootstrap();
 
 export default Ember.ObjectController.extend({
-  notify: Notify.Container.create(),
   username: null,
   password: null,
 
@@ -27,7 +27,7 @@ export default Ember.ObjectController.extend({
           'username': '',
           'password': ''
         });
-        alert(err.responseText);
+        Notify.alert(err.responseText);
       });
     }
   }
