@@ -11,6 +11,11 @@ export default Ember.Route.extend({
   	return this.store.find('post', {operation: "dashboardPosts"});
   },
 
+  setupController: function (controller, model) {
+    this._super(controller, model);
+    controller.set('ownPosts', model);
+  },
+
   renderTemplate: function() {
     this.render('dashboard');
     this.render('header', {into: 'dashboard', outlet: 'header'});

@@ -3,8 +3,20 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   itemController: 'post',
   body: "", 
-  sortProperties: ['date'],
-  sortAscending: false,
+
+  dashboardPosts: function() {
+    var posts = [];
+
+    this.get('ownPosts').forEach(function(post) {
+      posts.push(post);
+    });
+
+    return Ember.ArrayController.create({
+      content: posts,
+      sortProperties: ['date'],
+      sortAscending: false
+    });
+  }.property('ownPosts.[]'),
 
   remainingWords: function() {
     return 140 - this.get('body').length;
@@ -21,6 +33,7 @@ export default Ember.ArrayController.extend({
 
       this.set('body', '');
       post.save();
+      this.get('ownPosts').pushObject(post);
     }
   },
 });
