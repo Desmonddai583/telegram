@@ -9,7 +9,7 @@
   {{/link-to}}
   <p>{{post.body}}</p>
   <span><em>{{format-time post.date}}</em></span>
-  {{#unless post.isAuthor}}
+  {{#unless isAuthor}}
   <span> . <a>Repost</a></span>
   {{else}}
   <span> . <a {{action 'deletePost' post}}>Delete</a></span>

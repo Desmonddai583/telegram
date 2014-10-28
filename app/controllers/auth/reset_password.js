@@ -11,7 +11,7 @@ export default Ember.ObjectController.extend({
       var self = this;
       var password = window.md5(self.get('password'));
       $.ajax({
-        url: '/api/resetPassword/',
+        url: '/api/auth/resetPassword',
         type: 'POST',
         dataType: 'json',
         data: {'password': password, 'token': self.get('params').token},

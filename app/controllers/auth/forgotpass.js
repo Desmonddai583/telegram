@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
       var self = this;
       var email = self.get('email');
       $.ajax({
-        url: '/api/forgotPassword/',
+        url: '/api/auth/forgotPassword',
         type: 'POST',
         dataType: 'json',
         data: {'email': email},

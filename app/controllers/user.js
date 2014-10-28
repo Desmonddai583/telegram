@@ -9,7 +9,7 @@ export default Ember.ObjectController.extend({
     follow: function(user) {
       var follow = user.id;
       $.ajax({
-        url: '/api/follow/',
+        url: '/api/users/follow/',
         type: 'POST',
         dataType: 'json',
         data: {followingID: follow},
@@ -22,7 +22,7 @@ export default Ember.ObjectController.extend({
     unfollow: function(user) {
       var follow = user.id;
       $.ajax({
-        url: '/api/unfollow/',
+        url: '/api/users/unfollow/',
         type: 'POST',
         dataType: 'json',
         data: {unfollowingID: follow},

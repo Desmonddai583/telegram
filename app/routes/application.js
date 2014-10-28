@@ -15,7 +15,7 @@ export default Ember.Route.extend({
   actions: {
     logout: function() {
       var self = this;
-      $.get('/api/logout')
+      $.get('/api/auth/logout')
        .done(function(){
          self.get('session').set('user', null);
          self.store.unloadAll('post');

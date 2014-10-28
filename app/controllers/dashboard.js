@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  itemController: 'post',
   body: "", 
 
   dashboardPosts: function() {
@@ -34,6 +33,11 @@ export default Ember.ArrayController.extend({
       this.set('body', '');
       post.save();
       this.get('ownPosts').pushObject(post);
+    },
+    deletePost: function(post) {
+      post.deleteRecord();
+      post.save();
+      this.get('ownPosts').removeObject(post);
     }
   },
 });

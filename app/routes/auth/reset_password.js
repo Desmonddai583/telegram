@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     var self = this;
     self.set('params', params);
     $.ajax({
-      url: '/api/checkToken/',
+      url: '/api/auth/checkToken',
       type: 'GET',
       dataType: 'json',
       data: {'token': params.token},
