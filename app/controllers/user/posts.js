@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  itemController: 'post',
   sortProperties: ['date'],
   sortAscending: false,
+
+  actions: {
+    deletePost: function(post) {
+      post.deleteRecord();
+      post.save();
+    }
+  },
 });
