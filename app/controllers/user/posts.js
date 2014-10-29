@@ -13,7 +13,7 @@ export default Ember.ArrayController.extend({
       var repost = this.store.createRecord('post', {
         body: post.get('body'),
         author: this.get('session.user'), 
-        originalAuthor: post.get('author')
+        originalAuthor: post.get('originalAuthor') ? post.get('originalAuthor') : post.get('author')
       });
       repost.save();
     }
