@@ -4,6 +4,7 @@ var Post = DS.Model.extend({
   body: DS.attr('string'),
   date: DS.attr('date'),
   author: DS.belongsTo('user'),
+  originalAuthor: DS.belongsTo('user')
 });
 
 export default Post;

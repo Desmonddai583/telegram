@@ -1,7 +1,7 @@
 <div class="posts col-md-6 col-md-offset-3">
   <div class="content">
     {{#each post in controller}}
-      {{single-post post=post deletePost="deletePost"}}
+      {{single-post post=post deletePost="deletePost" repost="repost"}}
     {{/each}}
   </div>
 </div>

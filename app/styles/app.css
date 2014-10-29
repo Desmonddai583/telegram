@@ -261,3 +261,37 @@ body {
   border: 1px solid #0084B2;
   margin-top: 20px;
 }
+
+.confirmRepost {
+  background-color: #F7F7F9;
+  height: 100px;
+}
+
+.confirmRepost .confirmRepostPhoto {
+  margin-left: 10px;
+  margin-top: 25px;
+  float: left;
+}
+
+.confirmRepost .confirmRepostBody {
+  margin-left: 15px;
+  margin-top: 25px;
+  float: left;
+}
+
+.confirmRepostBody .repost {
+  margin-right: 5px;
+}
+
+.confirmRepostBody .noRepost {
+  margin-left: 5px;
+}
+
+.repostedPhoto {
+  margin-left: 40px;
+  float: left; 
+}
+
+.repostedBody {
+  margin-left: 70px;
+}

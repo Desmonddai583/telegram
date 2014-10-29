@@ -38,6 +38,16 @@ export default Ember.ArrayController.extend({
       post.deleteRecord();
       post.save();
       this.get('ownPosts').removeObject(post);
-    }
+    },
+    repost: function(post) {
+      var repost = this.store.createRecord('post', {
+        body: post.get('body'),
+        author: this.get('session.user'), 
+        originalAuthor: post.get('author')
+      });
+
+      repost.save();
+      this.get('ownPosts').pushObject(repost);
+    }, 
   },
 });

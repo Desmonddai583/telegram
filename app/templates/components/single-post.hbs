@@ -1,18 +1,48 @@
+{{#if post.originalAuthor}}
+  <div class="repostedPhoto">
+    <img src="images/icon-retweet.png" height="20" width="20">
+  </div>
+  <div class="repostedBody">
+    <p>Reposted by {{post.author.name}}</p>
+  </div>
+{{/if}}
 <div class='photo'>
   {{#link-to 'user' post.author.id}}
     <img {{bind-attr src=post.author.photo}} height="60" width="60">
   {{/link-to}}
 </div>
 <div class='body'>
-  {{#link-to 'user' post.author.id}}
-    <p><strong>{{post.author.name}}</strong></p>
-  {{/link-to}}
-  <p>{{post.body}}</p>
-  <span><em>{{format-time post.date}}</em></span>
-  {{#unless isAuthor}}
-  <span> . <a>Repost</a></span>
+  {{#if post.originalAuthor}}
+    {{#link-to 'user' post.originalAuthor.id}}
+      <p><strong>{{post.originalAuthor.name}}</strong></p>
+    {{/link-to}}
+    <p>{{post.body}}</p>
   {{else}}
-  <span> . <a {{action 'deletePost' post}}>Delete</a></span>
-  {{/unless}}
+    {{#link-to 'user' post.author.id}}
+      <p><strong>{{post.author.name}}</strong></p>
+    {{/link-to}}
+    <p>{{post.body}}</p>
+  {{/if}}
+  <span><em>{{format-time post.date}}</em></span>
+  {{#if isLogin}}
+    {{#unless isAuthor}}
+      <span> . <a {{action 'showConfirm'}}>Repost</a></span>
+    {{else}}
+      <span> . <a {{action 'deletePost' post}}>Delete</a></span>
+    {{/unless}}
+  {{/if}}
 </div>
+{{#if showConfirm}}
+<div class="confirmRepost">
+  <div class="confirmRepostPhoto">
+    <img src="images/icon-retweet.png">
+  </div>
+  <div class="confirmRepostBody">
+    <p><strong>Repost this to your followers?</strong></p>
+    <a class='repost' {{action "repost" post}}>Yes</a>
+    .
+    <a class='noRepost' {{action "noRepost"}}>No</a>
+  </div>
+</div>
+{{/if}}
 <hr>
