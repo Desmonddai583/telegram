@@ -126,6 +126,7 @@ body {
 }
 
 .header {
+  height: 50px;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -152,9 +153,8 @@ body {
   display: inline-block
 }
 
-.profile-link a {
-  text-decoration: none;
-  color: #0084B2;
+.profile-link .dropdown {
+  display: inline-block
 }
 
 .dashboard .dashboard-body {
@@ -294,4 +294,9 @@ body {
 
 .repostedBody {
   margin-left: 70px;
+}
+
+.profile {
+  overflow-y: hidden;
+  background-color: #FFF;
 }

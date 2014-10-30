@@ -19,6 +19,7 @@ Router.map(function() {
   	this.route('followers');
   });
 
+  this.route('profile');
   this.route('dashboard');
 });
 

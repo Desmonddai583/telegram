@@ -15,7 +15,18 @@
         <img {{bind-attr src=session.user.photo}} height="30" width="30"> 
         <span>{{session.user.name}}</span>
       {{/link-to}}
-      <button class="btn btn-info" {{action "logout"}}>  Logout</a>
+
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Settings
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation">{{#link-to 'profile'}}Profiles{{/link-to}}
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" {{action "logout"}}>Logout</a></li>
+        </ul>
+      </div>
     {{else}}
       <span>
       {{#link-to 'auth.login'}}
@@ -28,5 +39,4 @@
       </span>
     {{/if}}
   </div>
-  
 </div>
