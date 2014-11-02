@@ -7,10 +7,6 @@ export default Ember.Route.extend({
     }
   },
 
-  model: function() {
-    
-  },
-
   renderTemplate: function() {
     this.render('profile');
     this.render('header', {into: 'profile', outlet: 'header'});

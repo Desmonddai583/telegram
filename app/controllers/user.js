@@ -14,7 +14,8 @@ export default Ember.ObjectController.extend({
         dataType: 'json',
         data: {followingID: follow},
         success: function() { 
-          user.isFollowedByCurrentUser = true;   
+          user.set('isFollowedByCurrentUser', true);
+         // user.isFollowedByCurrentUser = true;   
           user.save();
         },
       });
@@ -26,8 +27,9 @@ export default Ember.ObjectController.extend({
         type: 'POST',
         dataType: 'json',
         data: {unfollowingID: follow},
-        success: function() {    
-          user.isFollowedByCurrentUser = false;
+        success: function() {   
+          user.set('isFollowedByCurrentUser', false); 
+         // user.isFollowedByCurrentUser = false;
           user.save();
         },
       });
