@@ -15,9 +15,8 @@ export default Ember.ObjectController.extend({
         data: {followingID: follow},
         success: function() { 
           user.set('isFollowedByCurrentUser', true);
-         // user.isFollowedByCurrentUser = true;   
           user.save();
-        },
+        }
       });
     },
     unfollow: function(user) {
@@ -29,9 +28,8 @@ export default Ember.ObjectController.extend({
         data: {unfollowingID: follow},
         success: function() {   
           user.set('isFollowedByCurrentUser', false); 
-         // user.isFollowedByCurrentUser = false;
           user.save();
-        },
+        }
       });
     }
   }
