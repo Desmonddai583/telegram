@@ -54,9 +54,18 @@ export default Ember.ArrayController.extend({
         key: 'pk_test_4bDVNxl75mulGCkHDx9YxFml',
         image: 'images/telegram-logo-header.png',
         token: function(token) {
-          debugger
-          // Use the token to create the charge with a server-side script.
-          // You can access the token ID with `token.id`
+          $.ajax({
+            url: '/api/users/upgrade_token/',
+            type: 'POST',
+            dataType: 'json',
+            data: {token: token.id, email: token.email},
+            success: function() { 
+              alert("Sucess");
+            },
+            error: function(err) {
+              alert(err.responsText);
+            }
+          });        
         }
       });
       
