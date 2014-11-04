@@ -60,10 +60,12 @@ export default Ember.ArrayController.extend({
             dataType: 'json',
             data: {token: token.id, email: token.email},
             success: function() { 
-              alert("Sucess");
+              $('#upgrade-message').text("You've successfully update to a Pro account! You will receive an email digest every morning with the most important posts from the last 24 hours.");
+              $('#upgrade-result').modal('show');
             },
             error: function(err) {
-              alert(err.responsText);
+              $('#upgrade-message').text("Sorry, your payment failed." + err.responseText);
+              $('#upgrade-result').modal('show');
             }
           });        
         }
