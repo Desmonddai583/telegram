@@ -49,5 +49,22 @@ export default Ember.ArrayController.extend({
       repost.save();
       this.get('ownPosts').pushObject(repost);
     }, 
+    upgradeAccount: function() {
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_4bDVNxl75mulGCkHDx9YxFml',
+        image: 'images/telegram-logo-header.png',
+        token: function(token) {
+          debugger
+          // Use the token to create the charge with a server-side script.
+          // You can access the token ID with `token.id`
+        }
+      });
+      
+      handler.open({
+        name: 'Telegram',
+        description: 'Upgrade Account ($5.00)',
+        amount: 500
+      });
+    }
   },
 });

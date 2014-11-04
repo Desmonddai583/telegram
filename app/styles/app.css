@@ -297,6 +297,7 @@ body {
 }
 
 .profile {
+  min-height: 1000px;
   overflow-y: hidden;
   background-color: #FFF;
 }

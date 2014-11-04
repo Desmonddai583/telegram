@@ -22,7 +22,8 @@
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-          <li role="presentation">{{#link-to 'profile'}}Profiles{{/link-to}}
+          <li role="presentation">{{#link-to 'profile'}}Profiles{{/link-to}}</li>
+          <li role="presentation"><a {{action "upgradeAccount"}}>Upgrade Account</a></li>
           <li role="presentation" class="divider"></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" {{action "logout"}}>Logout</a></li>
         </ul>
