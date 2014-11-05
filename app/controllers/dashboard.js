@@ -55,7 +55,7 @@ export default Ember.ArrayController.extend({
         image: 'images/telegram-logo-header.png',
         token: function(token) {
           $.ajax({
-            url: '/api/users/upgrade_token/',
+            url: '/api/users/upgrade_account/',
             type: 'POST',
             dataType: 'json',
             data: {token: token.id, email: token.email},
