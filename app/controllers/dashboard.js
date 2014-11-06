@@ -102,7 +102,6 @@ export default Ember.ArrayController.extend({
       });     
     },
     updateCreditCard: function() {
-      var self = this;
       var handler = StripeCheckout.configure({
         key: 'pk_test_4bDVNxl75mulGCkHDx9YxFml',
         image: 'images/telegram-logo-header.png',
