@@ -100,6 +100,36 @@ export default Ember.ArrayController.extend({
           Notify.alert(err.responseText);
         }
       });     
+    },
+    updateCreditCard: function() {
+      var self = this;
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_4bDVNxl75mulGCkHDx9YxFml',
+        image: 'images/telegram-logo-header.png',
+        token: function(token) {
+          $.ajax({
+            url: '/api/users/update_credit_card/',
+            type: 'POST',
+            dataType: 'json',
+            data: {token: token.id},
+            success: function() { 
+              $('#upgrade-message').text("You've successfully update your credit card info!");
+              $('#upgrade-result').modal('show');
+            },
+            error: function(err) {
+              $('#upgrade-message').text("Sorry, your credit card update failed." + err.responseText);
+              $('#upgrade-result').modal('show');
+            }
+          });        
+        }
+      });
+      
+      handler.open({
+        name: 'Telegram',
+        description: 'Update your credit card(No charge)',
+        amount: 0,
+        panelLabel: 'Update'
+      }); 
     }
   },
 });

@@ -25,6 +25,7 @@
           <li role="presentation">{{#link-to 'profile'}}Profiles{{/link-to}}</li>
           {{#if userIsPro}}
             <li role="presentation"><a {{action "downgradeAccount"}}>Downgrade Account</a></li>
+            <li role="presentation"><a {{action "updateCreditCard"}}>Update Credit Card</a></li>
           {{else}}
             <li role="presentation"><a {{action "upgradeAccount"}}>Upgrade Account</a></li>
           {{/if}}
