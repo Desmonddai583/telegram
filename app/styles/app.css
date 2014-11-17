@@ -144,7 +144,6 @@ body {
 }
 
 .header .home-logo {
-  margin-left: 580px;
   display: inline-block;
 }
 
@@ -300,4 +299,33 @@ body {
   min-height: 1000px;
   overflow-y: hidden;
   background-color: #FFF;
+}
+
+.profile-body {
+  margin-top: 20px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#preview {
+  margin-left: 30px;
+  display: inline-block;
 }
