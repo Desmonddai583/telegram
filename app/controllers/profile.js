@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
     return this.get('session.user.email');
   }.property('session.user'),
   photo: function() {
-    return this.get('session.user.photo');
+    return this.get('session.user.photo') || "images/avatar.png";
   }.property('session.user'),
 
   actions: {

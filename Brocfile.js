@@ -25,5 +25,6 @@ app.import('vendor/ember-notify/dist/named-amd/main.js', {
   }
 });
 app.import('vendor/ember-notify/dist/ember-notify.css');
+app.import('vendor/ember-uploader/dist/ember-uploader.js');
 
 module.exports = app.toTree();
