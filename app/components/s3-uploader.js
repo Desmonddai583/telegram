@@ -1,7 +1,6 @@
 import Ember from "ember";
 
-export default Ember.View.extend({
-  templateName: "s3-uploader",
+export default Ember.FileField.extend({
   url: '',
 
   filesDidChange: (function() {
@@ -22,7 +21,6 @@ export default Ember.View.extend({
     });
 
     if (!Ember.isEmpty(files)) {
-      debugger
       uploader.upload(files[0]); 
     }
   }).observes('files'),

@@ -1,5 +1,5 @@
 <span class="btn btn-info btn-file">
-  Upload <input type="file" id="files"/>
+  Upload {{s3-uploader url="/api/users/sign_s3"}}
 </span>
 <div id="preview"><img style="width: 70px;height: 70px" {{bind-attr src=photo}}/></div>
 <p id="status" class="help-block">Please upload your avatar</p>
