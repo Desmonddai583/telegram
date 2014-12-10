@@ -17,6 +17,7 @@ Router.map(function() {
   	this.route('posts', { path: '/' });
   	this.route('following');
   	this.route('followers');
+    this.route('message');
   });
 
   this.route('profile');
