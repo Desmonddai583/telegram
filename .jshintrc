@@ -1,5 +1,8 @@
 {
   "predef": {
+    "$": true,
+    "Notify": true,  
+    "StripeCheckout": true,
     "document": true,
     "window": true,
     "TelegramENV": true,
