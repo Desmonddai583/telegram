@@ -16,7 +16,9 @@
       {{#link-to 'user.posts' activeClass="active-tab"}}Posts{{/link-to}}
       {{#link-to 'user.following' activeClass="active-tab"}}Following{{/link-to}}
       {{#link-to 'user.followers' activeClass="active-tab"}}Followers{{/link-to}}
-      {{#link-to 'user.message' activeClass="active-tab"}}Message{{/link-to}}
+      {{#unless isSelf}}
+        {{#link-to 'user.message' activeClass="active-tab"}}Message{{/link-to}}
+      {{/unless}}
     </div>
   <hr>
 </div>
