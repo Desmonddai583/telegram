@@ -1,19 +1,24 @@
 import Ember from "ember";
 
-export default Ember.FileField.extend({
+export default EmberUploader.FileField.extend({
   url: '',
+  photoPath: '',
 
   filesDidChange: (function() {
     var uploadUrl = this.get('url');
     var files = this.get('files');
 
-    var uploader = Ember.S3Uploader.create({
+    var uploader = EmberUploader.S3Uploader.create({
       url: uploadUrl,
       type: 'GET'
     });
 
-    uploader.on('didUpload', function(response) {
-      debugger
+    uploader.on('didUpload', function() {
+    });
+
+    uploader.on('didSign', function(response) {
+      var path = "//" + response.bucket + ".s3.amazonaws.com";
+      this.set("photoPath", path + "/" + response.key);
     });
 
     uploader.on('progress', function(e) {
