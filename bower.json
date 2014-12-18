@@ -15,6 +15,6 @@
     "bootstrap": "~3.2.0",
     "JavaScript-MD5": "~1.1.0",
     "ember-notify": "~1.1.9",
-    "ember-uploader": "https://github.com/benefitcloud/ember-uploader.git#faaa2d0c2e021ea33abd521b5e4f1acf896d2441"
+    "ember-uploader": "~0.3.2"
   }
 }
