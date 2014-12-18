@@ -7,6 +7,7 @@ export default EmberUploader.FileField.extend({
   filesDidChange: (function() {
     var uploadUrl = this.get('url');
     var files = this.get('files');
+    var component = this;
 
     var uploader = EmberUploader.S3Uploader.create({
       url: uploadUrl,
@@ -17,6 +18,7 @@ export default EmberUploader.FileField.extend({
     });
 
     uploader.on('didSign', function(response) {
+      debugger
       var path = "//" + response.bucket + ".s3.amazonaws.com";
       this.set("photoPath", path + "/" + response.key);
     });
