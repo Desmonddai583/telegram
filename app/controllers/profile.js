@@ -30,6 +30,9 @@ export default Ember.ObjectController.extend({
           Notify.alert(err.responseText);
         }
       });
+    },
+    updatePhoto: function(filePath) {
+      this.setProperties({ 'photo': filePath });
     }
   }
 });

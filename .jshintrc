@@ -6,7 +6,8 @@
     "document": true,
     "window": true,
     "TelegramENV": true,
-    "moment": true
+    "moment": true,
+    "EmberUploader": true
   },
   "browser" : true,
   "boss" : true,

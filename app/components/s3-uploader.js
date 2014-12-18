@@ -20,6 +20,7 @@ export default EmberUploader.FileField.extend({
     uploader.on('didSign', function(response) {
       var path = "//" + response.bucket + ".s3.amazonaws.com";
       this.set("photoPath", path + "/" + response.key);
+      component.sendAction('updatePhoto', this.get('photoPath'));
     });
 
     uploader.on('progress', function(e) {

@@ -1,7 +1,7 @@
 <div class="profile">
   {{outlet header}}
   <div class="profile-body col-xs-6 col-md-4 col-md-offset-4 text-center">
-    {{upload-block}}
+    {{upload-block updatePhoto="updatePhoto"}}
     <div class="form-group">
     <label for="name">Name</label>
     {{input type="text" class="form-control" id="name" name="full_name" value=fullName}}<br/>
